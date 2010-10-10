@@ -19,8 +19,8 @@ set! browser.tabs.closeButtons=2
 set! ui.key.generalAccessKey=0
 
 " Gmail/LDR/Fastladder/OpenFL/はてブでは新規タブをバックグラウンドで開く
-autocmd LocationChange (?!https?://(www¥.google¥.(co¥.jp|com)/reader)|(mail¥.google¥.com¥/(mail|a)¥/|(reader¥.livedoor¥.com|fastladder¥.com|0¥.0¥.0¥.0¥:3000)/reader/|b¥.hatena¥.ne¥.jp/lillilife)) :set! browser.tabs.loadDivertedInBackground=false
-autocmd LocationChange https?://(www¥.google¥.(co¥.jp|com)/reader)|(mail¥.google¥.com¥/(mail|a)¥/|(reader¥.livedoor¥.com|fastladder¥.com|0¥.0¥.0¥.0¥:3000)/reader/|b¥.hatena¥.ne¥.jp/lillilife) :set! browser.tabs.loadDivertedInBackground=true
+autocmd LocationChange (?!https?://(www\.google¥.(co¥.jp|com)/reader)|(mail¥.google¥.com¥/(mail|a)¥/|(reader¥.livedoor¥.com|fastladder¥.com|0¥.0¥.0¥.0¥:3000)/reader/|b¥.hatena¥.ne¥.jp/lillilife)) :set! browser.tabs.loadDivertedInBackground=false
+autocmd LocationChange https?://(www\.google¥.(co¥.jp|com)/reader)|(mail¥.google¥.com¥/(mail|a)¥/|(reader¥.livedoor¥.com|fastladder¥.com|0¥.0¥.0¥.0¥:3000)/reader/|b¥.hatena¥.ne¥.jp/lillilife) :set! browser.tabs.loadDivertedInBackground=true
 
 " options
 " ======================================================================
@@ -122,7 +122,7 @@ noremap -- <C-x>
 
 "Ctrl+rで再起動,Ctrl+hでヘルプ ,sで設定ファイル再読込
 map <C-r> :restart<CR>
-map ,s :so ‾/.vimperatorrc<CR>
+map ,s :so ~/.vimperatorrc<CR>
 
 "各種バー表示をトグル
 noremap <C-1> :set guioptions=r<cr>
@@ -227,21 +227,21 @@ map Z :togglelocalkeymode<CR>
 "command! -nargs=+ lazy autocmd VimperatorEnter .* <args>
 
 " Gmail
-"lazy fmaps -u='https?://mail¥.google¥.com/(mail|a)/' c / j k n p o u e x s r a # [ ] z ? gi gs gt gd ga gc
+"lazy fmaps -u='https?://mail\.google\.com/(mail|a)/' c / j k n p o u e x s r a # [ ] z ? gi gs gt gd ga gc
 " Google Reader Star Opener用(http://userscripts.org/scripts/show/33653)
-"lazy fmaps -u='http://www¥.google¥.(co¥.jp|com)/reader' -events=keydown x
+"lazy fmaps -u='http://www\.google\.(co\.jp|com)/reader' -events=keydown x
 " GoogleReader
-"lazy fmaps -u='http://www¥.google¥.(co¥.jp|com)/reader' -events=vkeypress i j k L n p o O t m s v V a A r S N P x X gh ga gs gt gu u / ?
+"lazy fmaps -u='http://www\.google¥.(co\.jp|com)/reader' -events=vkeypress i j k L n p o O t m s v V a A r S N P x X gh ga gs gt gu u / ?
 " LDR/Fastladder/OpenFL
-"lazy fmaps -u='http://(reader¥.livedoor¥.com|fastladder¥.com|0¥.0¥.0¥.0¥:3000)/reader/' j k s a p v c z Z b i r < > o,vj J,<PageDown> K,<PageUp> q w g u T
+"lazy fmaps -u='http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/' j k s a p v c z Z b i r < > o,vj J,<PageDown> K,<PageUp> q w g u T
 " Fastladder Reblog用 (要tombloo.xpi/ldr+tombloo.user.js)
-"lazy fmaps -u='http://(reader¥.livedoor¥.com|fastladder¥.com|0¥.0¥.0¥.0¥:3000)/reader/' i,Tj
+"lazy fmaps -u='http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/' i,Tj
 " Tumblr (要dashboard+tombloo.user.js, ReblogCommand.user.js)
-"lazy fmaps -u='http://.*¥.tumblr¥.com/' i,tj p
+"lazy fmaps -u='http://.*\.tumblr\.com/' i,tj p
 " FriendFeed
-"lazy fmaps -u='friendfeed¥.com/' -events=keydown p P q / gh gd gm gb
+"lazy fmaps -u='friendfeed\.com/' -events=keydown p P q / gh gd gm gb
 " はてブ
-"lazy fmaps -u='http://b¥.hatena¥.ne¥.jp/lillilife' j k o e b
+"lazy fmaps -u='http://b\.hatena\.ne\.jp/lillilife' j k o e b
 " iview
 "lazy fmaps -u='chrome://iviewfx/content/iview.html' j k s a z o i,tj p
 " vimperator-labs
@@ -251,21 +251,21 @@ map Z :togglelocalkeymode<CR>
 " feedSomeKeys_2.js
 autocmd LocationChange .* :fmapc
 " Gmail
-autocmd LocationChange ^https?://mail¥.google¥.com/(mail|a)/ :fmap! c / j k n p o u e x s r a # [ ] z ? gi gs gt gd ga gc
+autocmd LocationChange ^https?://mail\.google\.com/(mail|a)/ :fmap! c / j k n p o u e x s r a # [ ] z ? gi gs gt gd ga gc
 " GoogleReader
-autocmd LocationChange ^http://www¥.google¥.(co¥.jp|com)/reader :fmap -v i j k n p o O t m s v V a A r S N P X gh ga gs gt gu u / ?
+autocmd LocationChange ^http://www\.google\.(co\.jp|com)/reader :fmap -v i j k n p o O t m s v V a A r S N P X gh ga gs gt gu u / ?
 " Google Reader Star Opener用(http://userscripts.org/scripts/show/33653)
-autocmd LocationChange ^http://www¥.google¥.(co¥.jp|com)/reader :fmap -v -event keydown x
+autocmd LocationChange ^http://www\.google\.(co\.jp|com)/reader :fmap -v -event keydown x
 " LDR/Fastladder/OpenFL
-autocmd LocationChange ^http://(reader¥.livedoor¥.com|fastladder¥.com|0¥.0¥.0¥.0¥:3000)/reader/ :fmap j k s a p v c z Z b i r < > o,vj J,<PageDown> K,<PageUp> q w g u T
+autocmd LocationChange ^http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/ :fmap j k s a p v c z Z b i r < > o,vj J,<PageDown> K,<PageUp> q w g u T
 " Fastladder Reblog用 (要tombloo.xpi/ldr+tombloo.user.js)
-autocmd LocationChange ^http://(reader¥.livedoor¥.com|fastladder¥.com|0¥.0¥.0¥.0¥:3000)/reader/ :fmap i,Tj
+autocmd LocationChange ^http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/ :fmap i,Tj
 " Tumblr (要dashboard+tombloo.user.js, ReblogCommand.user.js)
-autocmd LocationChange ^http://.*¥.tumblr¥.com/ :fmap i,tj p
+autocmd LocationChange ^http://.*\.tumblr\.com/ :fmap i,tj p
 " FriendFeed
-autocmd LocationChange 'friendfeed¥.com/' :fmap! -vkey -event keydown p P q / gh gd gm gb
+autocmd LocationChange 'friendfeed\.com/' :fmap! -vkey -event keydown p P q / gh gd gm gb
 " はてブ
-autocmd LocationChange ^http://b¥.hatena¥.ne¥.jp/lillilife :fmap j k o e b
+autocmd LocationChange ^http://b\.hatena\.ne\.jp/lillilife :fmap j k o e b
 " iview
 autocmd LocationChange ^chrome://iviewfx/content/iview.html :fmap j k s a z o i,tj p
 

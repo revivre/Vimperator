@@ -21,20 +21,20 @@ liberator.globalVariables.multi_requester_default_sites = "alc,goo,favotter-new,
 
 /* KEY MAPPING */
 liberator.globalVariables.multi_requester_mappings = [
-	[',mt', 'twitter-search-pcod-no-jp'],
-	[',Mt', 'twitter-search-pcod-no-jp', '!'],
-	[',mT', 'twitter-search-pcod-no-jp',    , '["revivre"]'],
-	[',MT', 'twitter-search-pcod-no-jp', '!', '["revivre"]'],
-	[',mf', 'favotter-new'],
-	[',Mf', 'favotter-new', '!'],
-	[',mF', 'favotter-new',    ,'["revivre"]'],
-	[',MF', 'favotter-new', '!', '["revivre"]'],
-	[',ma', 'alc'],
-	[',Ma', 'alc', '!'],
-	[',mg', 'goo'],
-	[',Mg', 'goo', '!'],
-	[',mw', 'wikipedia-ja'],
-	[',Mw', 'wikipedia-ja', '!']
+  [',mt', 'twitter-search-pcod-no-jp'],
+  [',Mt', 'twitter-search-pcod-no-jp', '!'],
+  [',mT', 'twitter-search-pcod-no-jp',    , '["revivre"]'],
+  [',MT', 'twitter-search-pcod-no-jp', '!', '["revivre"]'],
+  [',mf', 'favotter-new'],
+  [',Mf', 'favotter-new', '!'],
+  [',mF', 'favotter-new',    ,'["revivre"]'],
+  [',MF', 'favotter-new', '!', '["revivre"]'],
+  [',ma', 'alc'],
+  [',Ma', 'alc', '!'],
+  [',mg', 'goo'],
+  [',Mg', 'goo', '!'],
+  [',mw', 'wikipedia-ja'],
+  [',Mw', 'wikipedia-ja', '!']
 ];
 
 
@@ -63,26 +63,24 @@ liberator.registerObserver("enter", function() {
 // copy.js
 //liberator.globalVariables.copy_use_wedata = true;
 liberator.globalVariables.copy_templates = [
-	{ label: 'bitlyURL', value: '%bitURL%', custom: function() { return plugins.bitly.get(buffer.URL);}},
-	{ label: 'URLAndtitle',     value: '%URL% - %TITLE%' },
-	{ label: 'url',             value: '%URL%' },
-	{ label: 'title',     value: '%TITLE%' },
-	{ label: 'titleAndURL',     value: '%TITLE% - %URL%' }
+  { label: 'bitlyURL', value: '%bitURL%', custom: function() { return plugins.bitly.get(buffer.URL);}},
+  { label: 'URLAndtitle',     value: '%URL% - %TITLE%' },
+  { label: 'url',             value: '%URL%' },
+  { label: 'title',     value: '%TITLE%' },
+  { label: 'titleAndURL',     value: '%TITLE% - %URL%' }
 ];
 
 // localKeymode.js
-liberator.globalVariables.localKeyMappings=[
-  [/^http:¥/¥/www¥.nicovideo¥.jp¥/watch/, [
-    ['p', ':nicopause'],
-    ['m', ':nicomute'],
-    ['v', ':nicommentvisible'],
-    ['s', ':nicoseek! +10'],
-    ['S', ':nicoseek! -10'],
-    ['z', ':nicosize'],
-    ['c', ':nicomment ', true],
-    ['C', ':nicommand ', true],
-  ]],
-];
+//liberator.globalVariables.localKeyMappings=[
+//  [/^http:¥/¥/www¥.nicovideo¥.jp¥/watch/, [
+//    ['p', ':nicopause'],
+//    ['m', ':nicomute'],
+//    ['v', ':nicommentvisible'],
+//    ['s', ':nicoseek! +10'],
+//    ['S', ':nicoseek! -10'],
+//    ['z', ':nicosize'],
+//  ]],
+//];
 
 // finished
 //liberator.echo('.vimperator.js sourced.');
