@@ -270,7 +270,7 @@ autocmd LocationChange ^http://b¥.hatena¥.ne¥.jp/lillilife :fmap j k o e b
 autocmd LocationChange ^chrome://iviewfx/content/iview.html :fmap j k s a z o i,tj p
 
 " JS関連は別ファイルに(.vimperatorrc.js)
-source ‾/.vimperatorrc.js
+source ~/.vimperatorrc.js
 " 読み込みおわったらメッセージ
 echomsg "vimperator: Welcome back."
 
