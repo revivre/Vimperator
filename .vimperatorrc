@@ -1,0 +1,287 @@
+"2.0 (created: 2009/03/28 23:48:07)
+
+
+" prefs
+" ======================================================================
+echomsg "loading..."
+autocmd VimperatorEnter .* pluginmanager update
+
+" caretのサイズ
+"set! ui.caretWidth=10
+
+" undo保持数
+set! browser.sessionstore.max_tabs_undo=10
+
+" タブの閉じるボタン非表示
+set! browser.tabs.closeButtons=2
+
+" ページのアクセスキーを無効化
+set! ui.key.generalAccessKey=0
+
+" Gmail/LDR/Fastladder/OpenFL/はてブでは新規タブをバックグラウンドで開く
+autocmd LocationChange (?!https?://(www\.google\.(co\.jp|com)/reader)|(mail\.google\.com\/(mail|a)\/|(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/|b\.hatena\.ne\.jp/lillilife)) :set! browser.tabs.loadDivertedInBackground=false
+autocmd LocationChange https?://(www\.google\.(co\.jp|com)/reader)|(mail\.google\.com\/(mail|a)\/|(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/|b\.hatena\.ne\.jp/lillilife) :set! browser.tabs.loadDivertedInBackground=true
+
+" options
+" ======================================================================
+" 検索エンジン指定
+set defsearch=google
+set suggestengines=google
+
+" ex mode でインクリメント補完
+set wildoptions=auto
+
+" :[tab]open の補完対象と順番
+set complete=bSl
+
+" maine_coon.js
+"set mainecoon=am
+
+" ブラウザタイトルの変更
+set titlestring="Mozilla Firefox 3"
+
+" はてなツールバー非表示
+" set guioptions-=H
+" 右側にスクロールバーを表示
+set guioptions=r
+
+" 新しいタブで開く
+set newtab=help,addons,extoptions
+
+" 常にタブを表示
+set showtabline=2
+
+" リンクのURIをステータスラインに表示
+set showstatuslinks=1
+
+" 新規ウィンドウの処理
+set popups=tab
+
+" ページロード時にテキストボックスにフォーカスするのを防ぐ
+set focuscontent
+
+" 詳細表示を15行に(最大15)
+set verbose=7
+
+" echoerr履歴表示件数
+set messages=100
+
+" Beep設定
+set visualbell
+hi Bell opacity: .5;
+
+" mappings
+" ======================================================================
+" OSのキーバインドを再現 
+noremap <C-a> <C-v><C-a>
+noremap <C-c> <C-v><C-c>
+
+inoremap <C-a> <C-v><C-a>
+inoremap <C-c> <C-v><C-c>
+inoremap <C-v> <C-v><C-v>
+inoremap <C-x> <C-v><C-x>
+inoremap <C-z> <C-v><C-z>
+inoremap <C-Space> <C-v><C-Space>
+
+cnoremap <C-a> <C-v><C-a>
+cnoremap <C-c> <C-v><C-c>
+cnoremap <C-v> <C-v><C-v>
+cnoremap <C-x> <C-v><C-x>
+cnoremap <C-z> <C-v><C-z>
+
+
+"j/kの移動量を5倍に
+noremap j 5j
+noremap k 5k
+"J/KにPageDown,PageUpを割り当て(LDRizeが効いている場合でも指のポジションを動かさずに済む
+noremap J <C-d>
+noremap K <C-u>
+"h/lで戻る/進む
+noremap h <A-Left>
+noremap l <A-Right>
+"H/Lでタブ移動
+noremap H gT
+noremap L gt
+"←/→でタブ移動
+map <Left> <C-p>
+map <Right> <C-n>
+"Shift+←/Shift+→でタブ位置変更
+map <S-Right> :tabmove! +1<CR>
+map <S-Left> :tabmove! -1<CR>
+
+"検索バーにフォーカス
+" map <C-k> <C-v><C-k>
+
+"ロケーションバーにフォーカス
+map <C-l> <A-d>
+
+" URL中の数字を++/--
+noremap ++ <C-a>
+noremap -- <C-x>
+
+
+"Ctrl+rで再起動,Ctrl+hでヘルプ ,sで設定ファイル再読込
+map <C-r> :restart<CR>
+map ,s :so ~/_vimperatorrc<CR>
+
+"各種バー表示をトグル
+noremap <C-1> :set guioptions=r<cr>
+noremap <C-2> :set guioptions=Br<cr>
+noremap <C-3> :set guioptions=BmTr<cr>
+noremap <C-4> :set mainecoon=amc<cr>
+noremap <C-5> :set mainecoon=am<cr>
+noremap <C-6> :set mainecoon=m<cr>
+
+"qmarks関連
+map qm :qmark<Space>
+map qa :qmarks<CR>
+qmark G http://www.google.co.jp/
+qmark g http://www.google.co.jp/reader/view/
+qmark m http://mail.google.com/mail?hl=ja
+qmark c http://www.google.com/calendar/
+qmark M http://mixi.jp
+qmark t http://twitter.com
+qmark T http://www.tumblr.com
+qmark h http://www.hatena.ne.jp
+qmark l http://reader.livedoor.com/reader/
+qmark h http://www.hootsuite.com/
+qmark i http://www.instapaper.com/u
+qmark L grr
+qmark q quix
+qmark R rtm
+qmark S sfm
+qmark B bitly
+qmark I instapaper
+qmark A http://twitter.com/home, http://www.tumblr.com/dashboard, http://smart.fm/home, http://www.lastfm.jp/user/revivre, http://friendfeed.com/
+
+" twit: 今みているサイトをパラメタに入力したコメントをつけてポストする
+command! -nargs=* feedkeys js events.feedkeys("<args>")
+command! -nargs=* twit feedkeys :copy URLAndtitle<CR>:tw <args> <C-v>
+map T :tw Browsing:
+
+" plugins
+" ======================================================================
+" ime_controller.js
+let g:ex_ime_mode = "inactive"
+let g:textarea_ime_mode = "inactive"
+
+" char_hints_mod2.js
+let g:hints io="IO"
+let g:hintchars="HJKLASDFGYUIOPQWERTNMZXCVB"
+
+" migemo_hint.js
+set hintmatching=custom
+
+" ldrize_cooperation.js
+let g:ldrc_captureMappings = "['j','k','p','o','?']"
+let g:ldrc_intelligence_bind = "true"
+let g:ldrc_skip = "0.25"
+map z :toggleldrc<CR>
+
+
+" _smoozie.js
+let g:smooziee_scroll_amount="300"
+let g:smooziee_scroll_interval="15"
+
+"LDR Unread Counter.js
+" let livedoor_id = "lillilife"
+
+"google-search.js
+map s :gsearch!<Space>
+
+" browser_object.js
+"map x dd
+
+" twittperator.js
+map ,t :twittperator <CR>
+map ,T :twittperator<Space>
+map ,r :twittperator! <CR>
+map ,R :twittperator RT @
+
+"let g:twitter_auto_status_update = 1
+"let g:twitter_status_valid_duration = 90
+"map ,@ :twittperator!@<CR>
+
+" hatena bookmark 拡張
+javascript if (typeof hBookmark != 'undefined') liberator.loadScript('chrome://hatenabookmark/content/vimperator/plugin/hatenabookmark.js', {__proto__: this});
+
+"はてなブックマークからタブで開く
+map b :hbt<Space>
+
+" access_hatena.js
+map ,h :accesshatena<Space>
+
+" browser_object.js
+map x dd
+
+" copy.js
+map cp :copy<Space>
+map cb :copy<Space>bitlyURL<CR>
+
+" localkeymode.js
+let g:localkeymode_enable = "true"
+map Z :togglelocalkeymode<CR>
+
+" feedSomeKeys_3.js
+" http://vimperator.g.hatena.ne.jp/nokturnalmortum/20100302/1267531921
+"command! -nargs=+ lazy autocmd VimperatorEnter .* <args>
+
+" Gmail
+"lazy fmaps -u='https?://mail\.google\.com/(mail|a)/' c / j k n p o u e x s r a # [ ] z ? gi gs gt gd ga gc
+" Google Reader Star Opener用(http://userscripts.org/scripts/show/33653)
+"lazy fmaps -u='http://www\.google\.(co\.jp|com)/reader' -events=keydown x
+" GoogleReader
+"lazy fmaps -u='http://www\.google\.(co\.jp|com)/reader' -events=vkeypress i j k L n p o O t m s v V a A r S N P x X gh ga gs gt gu u / ?
+" LDR/Fastladder/OpenFL
+"lazy fmaps -u='http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/' j k s a p v c z Z b i r < > o,vj J,<PageDown> K,<PageUp> q w g u T
+" Fastladder Reblog用 (要tombloo.xpi/ldr+tombloo.user.js)
+"lazy fmaps -u='http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/' i,Tj
+" Tumblr (要dashboard+tombloo.user.js, ReblogCommand.user.js)
+"lazy fmaps -u='http://.*\.tumblr\.com/' i,tj p
+" FriendFeed
+"lazy fmaps -u='friendfeed\.com/' -events=keydown p P q / gh gd gm gb
+" はてブ
+"lazy fmaps -u='http://b\.hatena\.ne\.jp/lillilife' j k o e b
+" iview
+"lazy fmaps -u='chrome://iviewfx/content/iview.html' j k s a z o i,tj p
+" vimperator-labs
+"lazy fmaps -u='http://code.google.com/p/vimperator-labs/issues/list' o j k
+"lazy fmaps -u='http://code.google.com/p/vimperator-labs/issues/detail' u
+
+" feedSomeKeys_2.js
+autocmd LocationChange .* :fmapc
+" Gmail
+autocmd LocationChange ^https?://mail\.google\.com/(mail|a)/ :fmap! c / j k n p o u e x s r a # [ ] z ? gi gs gt gd ga gc
+" GoogleReader
+autocmd LocationChange ^http://www\.google\.(co\.jp|com)/reader :fmap -v i j k n p o O t m s v V a A r S N P X gh ga gs gt gu u / ?
+" Google Reader Star Opener用(http://userscripts.org/scripts/show/33653)
+autocmd LocationChange ^http://www\.google\.(co\.jp|com)/reader :fmap -v -event keydown x
+" LDR/Fastladder/OpenFL
+autocmd LocationChange ^http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/ :fmap j k s a p v c z Z b i r < > o,vj J,<PageDown> K,<PageUp> q w g u T
+" Fastladder Reblog用 (要tombloo.xpi/ldr+tombloo.user.js)
+autocmd LocationChange ^http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/ :fmap i,Tj
+" Tumblr (要dashboard+tombloo.user.js, ReblogCommand.user.js)
+autocmd LocationChange ^http://.*\.tumblr\.com/ :fmap i,tj p
+" FriendFeed
+autocmd LocationChange 'friendfeed\.com/' :fmap! -vkey -event keydown p P q / gh gd gm gb
+" はてブ
+autocmd LocationChange ^http://b\.hatena\.ne\.jp/lillilife :fmap j k o e b
+" iview
+autocmd LocationChange ^chrome://iviewfx/content/iview.html :fmap j k s a z o i,tj p
+
+" JS関連は別ファイルに(.vimperatorrc.js)
+source ~/.vimperatorrc.js
+" 読み込みおわったらメッセージ
+echomsg "vimperator: Welcome back."
+
+" colorscheme
+" ======================================================================
+colorscheme BrewBlue
+style -name tab-style-fix chrome://* <<EOM
+.tab-text-shadow,
+.tabs-newtab-button {
+  display: none !important;
+}
+EOM
+
+" vim: set ft=vimperator:
