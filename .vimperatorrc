@@ -122,7 +122,7 @@ noremap -- <C-x>
 
 "Ctrl+rで再起動,Ctrl+hでヘルプ ,sで設定ファイル再読込
 map <C-r> :restart<CR>
-map ,s :so ~/_vimperatorrc<CR>
+map ,s :so ~/.vimperatorrc<CR>
 
 "各種バー表示をトグル
 noremap <C-1> :set guioptions=r<cr>
