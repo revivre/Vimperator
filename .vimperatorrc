@@ -6,73 +6,73 @@
 echomsg "loading..."
 autocmd VimperatorEnter .* pluginmanager update
 
-" caret‚ÌƒTƒCƒY
+" caretã®ã‚µã‚¤ã‚º
 "set! ui.caretWidth=10
 
-" undo•Û”
+" undoä¿æŒæ•°
 set! browser.sessionstore.max_tabs_undo=10
 
-" ƒ^ƒu‚Ì•Â‚¶‚éƒ{ƒ^ƒ“”ñ•\¦
+" ã‚¿ãƒ–ã®é–‰ã˜ã‚‹ãƒœã‚¿ãƒ³éè¡¨ç¤º
 set! browser.tabs.closeButtons=2
 
-" ƒy[ƒW‚ÌƒAƒNƒZƒXƒL[‚ğ–³Œø‰»
+" ãƒšãƒ¼ã‚¸ã®ã‚¢ã‚¯ã‚»ã‚¹ã‚­ãƒ¼ã‚’ç„¡åŠ¹åŒ–
 set! ui.key.generalAccessKey=0
 
-" Gmail/LDR/Fastladder/OpenFL/‚Í‚Äƒu‚Å‚ÍV‹Kƒ^ƒu‚ğƒoƒbƒNƒOƒ‰ƒEƒ“ƒh‚ÅŠJ‚­
-autocmd LocationChange (?!https?://(www\.google\.(co\.jp|com)/reader)|(mail\.google\.com\/(mail|a)\/|(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/|b\.hatena\.ne\.jp/lillilife)) :set! browser.tabs.loadDivertedInBackground=false
-autocmd LocationChange https?://(www\.google\.(co\.jp|com)/reader)|(mail\.google\.com\/(mail|a)\/|(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/|b\.hatena\.ne\.jp/lillilife) :set! browser.tabs.loadDivertedInBackground=true
+" Gmail/LDR/Fastladder/OpenFL/ã¯ã¦ãƒ–ã§ã¯æ–°è¦ã‚¿ãƒ–ã‚’ãƒãƒƒã‚¯ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰ã§é–‹ã
+autocmd LocationChange (?!https?://(wwwÂ¥.googleÂ¥.(coÂ¥.jp|com)/reader)|(mailÂ¥.googleÂ¥.comÂ¥/(mail|a)Â¥/|(readerÂ¥.livedoorÂ¥.com|fastladderÂ¥.com|0Â¥.0Â¥.0Â¥.0Â¥:3000)/reader/|bÂ¥.hatenaÂ¥.neÂ¥.jp/lillilife)) :set! browser.tabs.loadDivertedInBackground=false
+autocmd LocationChange https?://(wwwÂ¥.googleÂ¥.(coÂ¥.jp|com)/reader)|(mailÂ¥.googleÂ¥.comÂ¥/(mail|a)Â¥/|(readerÂ¥.livedoorÂ¥.com|fastladderÂ¥.com|0Â¥.0Â¥.0Â¥.0Â¥:3000)/reader/|bÂ¥.hatenaÂ¥.neÂ¥.jp/lillilife) :set! browser.tabs.loadDivertedInBackground=true
 
 " options
 " ======================================================================
-" ŒŸõƒGƒ“ƒWƒ“w’è
+" æ¤œç´¢ã‚¨ãƒ³ã‚¸ãƒ³æŒ‡å®š
 set defsearch=google
 set suggestengines=google
 
-" ex mode ‚ÅƒCƒ“ƒNƒŠƒƒ“ƒg•âŠ®
+" ex mode ã§ã‚¤ãƒ³ã‚¯ãƒªãƒ¡ãƒ³ãƒˆè£œå®Œ
 set wildoptions=auto
 
-" :[tab]open ‚Ì•âŠ®‘ÎÛ‚Æ‡”Ô
+" :[tab]open ã®è£œå®Œå¯¾è±¡ã¨é †ç•ª
 set complete=bSl
 
 " maine_coon.js
 "set mainecoon=am
 
-" ƒuƒ‰ƒEƒUƒ^ƒCƒgƒ‹‚Ì•ÏX
+" ãƒ–ãƒ©ã‚¦ã‚¶ã‚¿ã‚¤ãƒˆãƒ«ã®å¤‰æ›´
 set titlestring="Mozilla Firefox 3"
 
-" ‚Í‚Ä‚Èƒc[ƒ‹ƒo[”ñ•\¦
+" ã¯ã¦ãªãƒ„ãƒ¼ãƒ«ãƒãƒ¼éè¡¨ç¤º
 " set guioptions-=H
-" ‰E‘¤‚ÉƒXƒNƒ[ƒ‹ƒo[‚ğ•\¦
+" å³å´ã«ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ãƒãƒ¼ã‚’è¡¨ç¤º
 set guioptions=r
 
-" V‚µ‚¢ƒ^ƒu‚ÅŠJ‚­
+" æ–°ã—ã„ã‚¿ãƒ–ã§é–‹ã
 set newtab=help,addons,extoptions
 
-" í‚Éƒ^ƒu‚ğ•\¦
+" å¸¸ã«ã‚¿ãƒ–ã‚’è¡¨ç¤º
 set showtabline=2
 
-" ƒŠƒ“ƒN‚ÌURI‚ğƒXƒe[ƒ^ƒXƒ‰ƒCƒ“‚É•\¦
+" ãƒªãƒ³ã‚¯ã®URIã‚’ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒ©ã‚¤ãƒ³ã«è¡¨ç¤º
 set showstatuslinks=1
 
-" V‹KƒEƒBƒ“ƒhƒE‚Ìˆ—
+" æ–°è¦ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®å‡¦ç†
 set popups=tab
 
-" ƒy[ƒWƒ[ƒh‚ÉƒeƒLƒXƒgƒ{ƒbƒNƒX‚ÉƒtƒH[ƒJƒX‚·‚é‚Ì‚ğ–h‚®
+" ãƒšãƒ¼ã‚¸ãƒ­ãƒ¼ãƒ‰æ™‚ã«ãƒ†ã‚­ã‚¹ãƒˆãƒœãƒƒã‚¯ã‚¹ã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã™ã‚‹ã®ã‚’é˜²ã
 set focuscontent
 
-" Ú×•\¦‚ğ15s‚É(Å‘å15)
+" è©³ç´°è¡¨ç¤ºã‚’15è¡Œã«(æœ€å¤§15)
 set verbose=7
 
-" echoerr—š—ğ•\¦Œ”
+" echoerrå±¥æ­´è¡¨ç¤ºä»¶æ•°
 set messages=100
 
-" Beepİ’è
+" Beepè¨­å®š
 set visualbell
 hi Bell opacity: .5;
 
 " mappings
 " ======================================================================
-" OS‚ÌƒL[ƒoƒCƒ“ƒh‚ğÄŒ» 
+" OSã®ã‚­ãƒ¼ãƒã‚¤ãƒ³ãƒ‰ã‚’å†ç¾ 
 noremap <C-a> <C-v><C-a>
 noremap <C-c> <C-v><C-c>
 
@@ -90,41 +90,41 @@ cnoremap <C-x> <C-v><C-x>
 cnoremap <C-z> <C-v><C-z>
 
 
-"j/k‚ÌˆÚ“®—Ê‚ğ5”{‚É
+"j/kã®ç§»å‹•é‡ã‚’5å€ã«
 noremap j 5j
 noremap k 5k
-"J/K‚ÉPageDown,PageUp‚ğŠ„‚è“–‚Ä(LDRize‚ªŒø‚¢‚Ä‚¢‚éê‡‚Å‚àw‚Ìƒ|ƒWƒVƒ‡ƒ“‚ğ“®‚©‚³‚¸‚ÉÏ‚Ş
+"J/Kã«PageDown,PageUpã‚’å‰²ã‚Šå½“ã¦(LDRizeãŒåŠ¹ã„ã¦ã„ã‚‹å ´åˆã§ã‚‚æŒ‡ã®ãƒã‚¸ã‚·ãƒ§ãƒ³ã‚’å‹•ã‹ã•ãšã«æ¸ˆã‚€
 noremap J <C-d>
 noremap K <C-u>
-"h/l‚Å–ß‚é/i‚Ş
+"h/lã§æˆ»ã‚‹/é€²ã‚€
 noremap h <A-Left>
 noremap l <A-Right>
-"H/L‚Åƒ^ƒuˆÚ“®
+"H/Lã§ã‚¿ãƒ–ç§»å‹•
 noremap H gT
 noremap L gt
-"©/¨‚Åƒ^ƒuˆÚ“®
+"â†/â†’ã§ã‚¿ãƒ–ç§»å‹•
 map <Left> <C-p>
 map <Right> <C-n>
-"Shift+©/Shift+¨‚Åƒ^ƒuˆÊ’u•ÏX
+"Shift+â†/Shift+â†’ã§ã‚¿ãƒ–ä½ç½®å¤‰æ›´
 map <S-Right> :tabmove! +1<CR>
 map <S-Left> :tabmove! -1<CR>
 
-"ŒŸõƒo[‚ÉƒtƒH[ƒJƒX
+"æ¤œç´¢ãƒãƒ¼ã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹
 " map <C-k> <C-v><C-k>
 
-"ƒƒP[ƒVƒ‡ƒ“ƒo[‚ÉƒtƒH[ƒJƒX
+"ãƒ­ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ãƒãƒ¼ã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹
 map <C-l> <A-d>
 
-" URL’†‚Ì”š‚ğ++/--
+" URLä¸­ã®æ•°å­—ã‚’++/--
 noremap ++ <C-a>
 noremap -- <C-x>
 
 
-"Ctrl+r‚ÅÄ‹N“®,Ctrl+h‚Åƒwƒ‹ƒv ,s‚Åİ’èƒtƒ@ƒCƒ‹Ä“Ç
+"Ctrl+rã§å†èµ·å‹•,Ctrl+hã§ãƒ˜ãƒ«ãƒ— ,sã§è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«å†èª­è¾¼
 map <C-r> :restart<CR>
-map ,s :so ~/.vimperatorrc<CR>
+map ,s :so â€¾/.vimperatorrc<CR>
 
-"Šeíƒo[•\¦‚ğƒgƒOƒ‹
+"å„ç¨®ãƒãƒ¼è¡¨ç¤ºã‚’ãƒˆã‚°ãƒ«
 noremap <C-1> :set guioptions=r<cr>
 noremap <C-2> :set guioptions=Br<cr>
 noremap <C-3> :set guioptions=BmTr<cr>
@@ -132,7 +132,7 @@ noremap <C-4> :set mainecoon=amc<cr>
 noremap <C-5> :set mainecoon=am<cr>
 noremap <C-6> :set mainecoon=m<cr>
 
-"qmarksŠÖ˜A
+"qmarksé–¢é€£
 map qm :qmark<Space>
 map qa :qmarks<CR>
 qmark G http://www.google.co.jp/
@@ -154,7 +154,7 @@ qmark B bitly
 qmark I instapaper
 qmark A http://twitter.com/home, http://www.tumblr.com/dashboard, http://smart.fm/home, http://www.lastfm.jp/user/revivre, http://friendfeed.com/
 
-" twit: ¡‚İ‚Ä‚¢‚éƒTƒCƒg‚ğƒpƒ‰ƒƒ^‚É“ü—Í‚µ‚½ƒRƒƒ“ƒg‚ğ‚Â‚¯‚Äƒ|ƒXƒg‚·‚é
+" twit: ä»Šã¿ã¦ã„ã‚‹ã‚µã‚¤ãƒˆã‚’ãƒ‘ãƒ©ãƒ¡ã‚¿ã«å…¥åŠ›ã—ãŸã‚³ãƒ¡ãƒ³ãƒˆã‚’ã¤ã‘ã¦ãƒã‚¹ãƒˆã™ã‚‹
 command! -nargs=* feedkeys js events.feedkeys("<args>")
 command! -nargs=* twit feedkeys :copy URLAndtitle<CR>:tw <args> <C-v>
 map T :tw Browsing:
@@ -202,10 +202,10 @@ map ,R :twittperator RT @
 "let g:twitter_status_valid_duration = 90
 "map ,@ :twittperator!@<CR>
 
-" hatena bookmark Šg’£
+" hatena bookmark æ‹¡å¼µ
 javascript if (typeof hBookmark != 'undefined') liberator.loadScript('chrome://hatenabookmark/content/vimperator/plugin/hatenabookmark.js', {__proto__: this});
 
-"‚Í‚Ä‚ÈƒuƒbƒNƒ}[ƒN‚©‚çƒ^ƒu‚ÅŠJ‚­
+"ã¯ã¦ãªãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ã‹ã‚‰ã‚¿ãƒ–ã§é–‹ã
 map b :hbt<Space>
 
 " access_hatena.js
@@ -227,21 +227,21 @@ map Z :togglelocalkeymode<CR>
 "command! -nargs=+ lazy autocmd VimperatorEnter .* <args>
 
 " Gmail
-"lazy fmaps -u='https?://mail\.google\.com/(mail|a)/' c / j k n p o u e x s r a # [ ] z ? gi gs gt gd ga gc
-" Google Reader Star Opener—p(http://userscripts.org/scripts/show/33653)
-"lazy fmaps -u='http://www\.google\.(co\.jp|com)/reader' -events=keydown x
+"lazy fmaps -u='https?://mailÂ¥.googleÂ¥.com/(mail|a)/' c / j k n p o u e x s r a # [ ] z ? gi gs gt gd ga gc
+" Google Reader Star Openerç”¨(http://userscripts.org/scripts/show/33653)
+"lazy fmaps -u='http://wwwÂ¥.googleÂ¥.(coÂ¥.jp|com)/reader' -events=keydown x
 " GoogleReader
-"lazy fmaps -u='http://www\.google\.(co\.jp|com)/reader' -events=vkeypress i j k L n p o O t m s v V a A r S N P x X gh ga gs gt gu u / ?
+"lazy fmaps -u='http://wwwÂ¥.googleÂ¥.(coÂ¥.jp|com)/reader' -events=vkeypress i j k L n p o O t m s v V a A r S N P x X gh ga gs gt gu u / ?
 " LDR/Fastladder/OpenFL
-"lazy fmaps -u='http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/' j k s a p v c z Z b i r < > o,vj J,<PageDown> K,<PageUp> q w g u T
-" Fastladder Reblog—p (—vtombloo.xpi/ldr+tombloo.user.js)
-"lazy fmaps -u='http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/' i,Tj
-" Tumblr (—vdashboard+tombloo.user.js, ReblogCommand.user.js)
-"lazy fmaps -u='http://.*\.tumblr\.com/' i,tj p
+"lazy fmaps -u='http://(readerÂ¥.livedoorÂ¥.com|fastladderÂ¥.com|0Â¥.0Â¥.0Â¥.0Â¥:3000)/reader/' j k s a p v c z Z b i r < > o,vj J,<PageDown> K,<PageUp> q w g u T
+" Fastladder Reblogç”¨ (è¦tombloo.xpi/ldr+tombloo.user.js)
+"lazy fmaps -u='http://(readerÂ¥.livedoorÂ¥.com|fastladderÂ¥.com|0Â¥.0Â¥.0Â¥.0Â¥:3000)/reader/' i,Tj
+" Tumblr (è¦dashboard+tombloo.user.js, ReblogCommand.user.js)
+"lazy fmaps -u='http://.*Â¥.tumblrÂ¥.com/' i,tj p
 " FriendFeed
-"lazy fmaps -u='friendfeed\.com/' -events=keydown p P q / gh gd gm gb
-" ‚Í‚Äƒu
-"lazy fmaps -u='http://b\.hatena\.ne\.jp/lillilife' j k o e b
+"lazy fmaps -u='friendfeedÂ¥.com/' -events=keydown p P q / gh gd gm gb
+" ã¯ã¦ãƒ–
+"lazy fmaps -u='http://bÂ¥.hatenaÂ¥.neÂ¥.jp/lillilife' j k o e b
 " iview
 "lazy fmaps -u='chrome://iviewfx/content/iview.html' j k s a z o i,tj p
 " vimperator-labs
@@ -251,27 +251,27 @@ map Z :togglelocalkeymode<CR>
 " feedSomeKeys_2.js
 autocmd LocationChange .* :fmapc
 " Gmail
-autocmd LocationChange ^https?://mail\.google\.com/(mail|a)/ :fmap! c / j k n p o u e x s r a # [ ] z ? gi gs gt gd ga gc
+autocmd LocationChange ^https?://mailÂ¥.googleÂ¥.com/(mail|a)/ :fmap! c / j k n p o u e x s r a # [ ] z ? gi gs gt gd ga gc
 " GoogleReader
-autocmd LocationChange ^http://www\.google\.(co\.jp|com)/reader :fmap -v i j k n p o O t m s v V a A r S N P X gh ga gs gt gu u / ?
-" Google Reader Star Opener—p(http://userscripts.org/scripts/show/33653)
-autocmd LocationChange ^http://www\.google\.(co\.jp|com)/reader :fmap -v -event keydown x
+autocmd LocationChange ^http://wwwÂ¥.googleÂ¥.(coÂ¥.jp|com)/reader :fmap -v i j k n p o O t m s v V a A r S N P X gh ga gs gt gu u / ?
+" Google Reader Star Openerç”¨(http://userscripts.org/scripts/show/33653)
+autocmd LocationChange ^http://wwwÂ¥.googleÂ¥.(coÂ¥.jp|com)/reader :fmap -v -event keydown x
 " LDR/Fastladder/OpenFL
-autocmd LocationChange ^http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/ :fmap j k s a p v c z Z b i r < > o,vj J,<PageDown> K,<PageUp> q w g u T
-" Fastladder Reblog—p (—vtombloo.xpi/ldr+tombloo.user.js)
-autocmd LocationChange ^http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/ :fmap i,Tj
-" Tumblr (—vdashboard+tombloo.user.js, ReblogCommand.user.js)
-autocmd LocationChange ^http://.*\.tumblr\.com/ :fmap i,tj p
+autocmd LocationChange ^http://(readerÂ¥.livedoorÂ¥.com|fastladderÂ¥.com|0Â¥.0Â¥.0Â¥.0Â¥:3000)/reader/ :fmap j k s a p v c z Z b i r < > o,vj J,<PageDown> K,<PageUp> q w g u T
+" Fastladder Reblogç”¨ (è¦tombloo.xpi/ldr+tombloo.user.js)
+autocmd LocationChange ^http://(readerÂ¥.livedoorÂ¥.com|fastladderÂ¥.com|0Â¥.0Â¥.0Â¥.0Â¥:3000)/reader/ :fmap i,Tj
+" Tumblr (è¦dashboard+tombloo.user.js, ReblogCommand.user.js)
+autocmd LocationChange ^http://.*Â¥.tumblrÂ¥.com/ :fmap i,tj p
 " FriendFeed
-autocmd LocationChange 'friendfeed\.com/' :fmap! -vkey -event keydown p P q / gh gd gm gb
-" ‚Í‚Äƒu
-autocmd LocationChange ^http://b\.hatena\.ne\.jp/lillilife :fmap j k o e b
+autocmd LocationChange 'friendfeedÂ¥.com/' :fmap! -vkey -event keydown p P q / gh gd gm gb
+" ã¯ã¦ãƒ–
+autocmd LocationChange ^http://bÂ¥.hatenaÂ¥.neÂ¥.jp/lillilife :fmap j k o e b
 " iview
 autocmd LocationChange ^chrome://iviewfx/content/iview.html :fmap j k s a z o i,tj p
 
-" JSŠÖ˜A‚Í•Êƒtƒ@ƒCƒ‹‚É(.vimperatorrc.js)
-source ~/.vimperatorrc.js
-" “Ç‚İ‚İ‚¨‚í‚Á‚½‚çƒƒbƒZ[ƒW
+" JSé–¢é€£ã¯åˆ¥ãƒ•ã‚¡ã‚¤ãƒ«ã«(.vimperatorrc.js)
+source â€¾/.vimperatorrc.js
+" èª­ã¿è¾¼ã¿ãŠã‚ã£ãŸã‚‰ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 echomsg "vimperator: Welcome back."
 
 " colorscheme
