@@ -1,7 +1,7 @@
 // .vimperator.js
 // for 2.2
 
-// a��autopagerize�؂�ւ�
+// aでautopagerize切り替え
     let evaluateXPath = util.evaluateXPath || buffer.evaluateXPath;
     mappings.addUserMap(
       [modes.NORMAL],
@@ -72,7 +72,7 @@ liberator.globalVariables.copy_templates = [
 
 // localKeymode.js
 liberator.globalVariables.localKeyMappings=[
-  [/^http:\/\/www\.nicovideo\.jp\/watch/, [
+  [/^http:¥/¥/www¥.nicovideo¥.jp¥/watch/, [
     ['p', ':nicopause'],
     ['m', ':nicomute'],
     ['v', ':nicommentvisible'],
