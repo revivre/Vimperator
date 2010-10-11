@@ -137,17 +137,20 @@ noremap <C-6> :set mainecoon=m<cr>
 "qmarks関連
 map qm :qmark<Space>
 map qa :qmarks<CR>
+qmark a http://www.amazon.co.jp/
 qmark G http://www.google.co.jp/
 qmark g http://www.google.co.jp/reader/view/
 qmark m http://mail.google.com/mail?hl=ja
 qmark c http://www.google.com/calendar/
 qmark d http://docs.google.com/
-qmark D http://www.dropbox.com/
+qmark f http:/last.fm/
+qmark s http://smart.fm/
 qmark M http://mixi.jp
 qmark t http://twitter.com
+qmark y http://www.yahoo.co.jp/
 qmark T http://www.tumblr.com
 qmark h http://www.hatena.ne.jp
-qmark l http://reader.livedoor.com/reader/
+mark l http://reader.livedoor.com/reader/
 qmark h http://www.hootsuite.com/
 qmark i http://www.instapaper.com/u
 qmark L grr
@@ -155,8 +158,11 @@ qmark q quix
 qmark R rtm
 qmark S sfm
 qmark B bitly
+qmark D http://www.dropbox.com/
 qmark I instapaper
 qmark A http://twitter.com/home, http://www.tumblr.com/dashboard, http://smart.fm/home, http://www.lastfm.jp/user/revivre, http://friendfeed.com/
+qmark Y http://www.youtube.com/
+qmark 3 http://sangoku.bg-time.jp/
 
 " twit: 今みているサイトをパラメタに入力したコメントをつけてポストする
 command! -nargs=* feedkeys js events.feedkeys("<args>")
