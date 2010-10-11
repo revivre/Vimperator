@@ -19,8 +19,10 @@ set! browser.tabs.closeButtons=2
 set! ui.key.generalAccessKey=0
 
 " Gmail/LDR/Fastladder/OpenFL/はてブでは新規タブをバックグラウンドで開く
-autocmd LocationChange (?!https?://(www\.google¥.(co¥.jp|com)/reader)|(mail¥.google¥.com¥/(mail|a)¥/|(reader¥.livedoor¥.com|fastladder¥.com|0¥.0¥.0¥.0¥:3000)/reader/|b¥.hatena¥.ne¥.jp/lillilife)) :set! browser.tabs.loadDivertedInBackground=false
-autocmd LocationChange https?://(www\.google¥.(co¥.jp|com)/reader)|(mail¥.google¥.com¥/(mail|a)¥/|(reader¥.livedoor¥.com|fastladder¥.com|0¥.0¥.0¥.0¥:3000)/reader/|b¥.hatena¥.ne¥.jp/lillilife) :set! browser.tabs.loadDivertedInBackground=true
+autocmd LocationChange (?!https?://(www\.google\.(co\.jp|com)/reader)|(mail\.google\.com\/(mail|a)\/|(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/|b\.hatena\.ne\.jp/lillilife)) :set! browser.tabs.loadDivertedInBackground=false
+autocmd LocationChange https?://(www\.google\.(co\.jp|com)/reader)|(mail\.google\.com\/(mail|a)\/|(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/|b\.hatena\.ne\.jp/lillilife) :set! browser.tabs.loadDivertedInBackground=true
+
+
 
 " options
 " ======================================================================
@@ -139,6 +141,8 @@ qmark G http://www.google.co.jp/
 qmark g http://www.google.co.jp/reader/view/
 qmark m http://mail.google.com/mail?hl=ja
 qmark c http://www.google.com/calendar/
+qmark d http://docs.google.com/
+qmark D http://www.dropbox.com/
 qmark M http://mixi.jp
 qmark t http://twitter.com
 qmark T http://www.tumblr.com
