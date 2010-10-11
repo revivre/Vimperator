@@ -158,6 +158,7 @@ qmark R rtm
 qmark S sfm
 qmark B bitly
 qmark D http://www.dropbox.com/
+qmark H http://github.com/
 qmark I instapaper
 qmark A http://twitter.com/home, http://www.tumblr.com/dashboard, http://smart.fm/home, http://www.lastfm.jp/user/revivre, http://friendfeed.com/
 qmark Y http://www.youtube.com/
