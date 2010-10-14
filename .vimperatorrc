@@ -215,15 +215,19 @@ let g:direct_sbm_use_services_by_post = "h"
 let g:direct_sbm_is_normalize = "false"
 let g:direct_sbm_is_use_migemo = "true"
 let g:direct_sbm_echo_type = "multiline"
-noremap a :sbm<CR>
-noremap A :sbm<Space>
-noremap ,a :btags<CR>
+
+map A :sbm<Space>[
+" noremap ,a :btags<CR>
 autocmd VimperatorEnter .* :btags
+
+" なぜか効かない
+"map a :sbm<CR>
 
 " sbmcommentsviewer.js
 let g:def_sbms = "h"
 let g:def_sbm_format = "id,tags,comment"
 map B :viewSBMComments<CR>
+map b :viewSBMComments -t h -c<CR>
 
 " access_hatena.js
 map ,h :accesshatena<Space>
