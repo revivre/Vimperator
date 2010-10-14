@@ -217,6 +217,7 @@ let g:direct_sbm_use_services_by_tag = "h"
 let g:direct_sbm_use_services_by_post = "h"
 let g:direct_sbm_is_normalize = "false"
 let g:direct_sbm_is_use_migemo = "true"
+let g:direct_sbm_echo_type = "multiline"
 noremap a :sbm<CR>
 noremap A :sbm<Space>
 noremap ,a :btags<CR>
@@ -304,5 +305,12 @@ style -name tab-style-fix chrome://* <<EOM
   display: none !important;
 }
 EOM
+
+" sbmcommentviewerの見た目をよくする
+style -name sbmcommentsviewer chrome://* <<EOM
+   .liberator-sbmcommentsviewer > dd:nth-child(odd) { background: #222; }
+   .liberator-sbmcommentsviewer-timestamp { color: #666; }
+EOM
+
 
 " vim: set ft=vimperator:
