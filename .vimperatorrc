@@ -224,7 +224,7 @@ autocmd VimperatorEnter .* :btags
 " sbmcommentsviewer.js
 let g:def_sbms = "h"
 let g:def_sbm_format = "id,tags,comment"
-:viewSBMComments<CR>
+map B :viewSBMComments<CR>
 
 " access_hatena.js
 map ,h :accesshatena<Space>
