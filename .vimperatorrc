@@ -108,8 +108,8 @@ noremap L gt
 map <Left> <C-p>
 map <Right> <C-n>
 "Shift+←/Shift+→でタブ位置変更
-map <S-Right> :tabmove! +1<CR>
-map <S-Left> :tabmove! -1<CR>
+"map <S-Right> :tabmove! +1<CR>
+"map <S-Left> :tabmove! -1<CR>
 
 "検索バーにフォーカス
 " map <C-k> <C-v><C-k>
