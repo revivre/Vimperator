@@ -1,4 +1,5 @@
 *~
 *.swp
+*.org
 .vimperatorrc.local
 info/

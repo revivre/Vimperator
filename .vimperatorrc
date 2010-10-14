@@ -197,9 +197,6 @@ let g:smooziee_scroll_interval="15"
 "LDR Unread Counter.js
 " let livedoor_id = "lillilife"
 
-"google-search.js
-map s :gsearch!<Space>
-
 " twittperator.js
 map ,t :twittperator <CR>
 map ,T :twittperator<Space>
@@ -306,7 +303,8 @@ style -name tab-style-fix chrome://* <<EOM
 }
 EOM
 
-" sbmcommentviewerの見た目をよくする
+" sbmcommentviewerを見やすく
+" http://vimperator.g.hatena.ne.jp/retlet/20100321/1269165657
 style -name sbmcommentsviewer chrome://* <<EOM
    .liberator-sbmcommentsviewer > dd:nth-child(odd) { background: #222; }
    .liberator-sbmcommentsviewer-timestamp { color: #666; }
