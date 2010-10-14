@@ -207,7 +207,7 @@ map ,R :twittperator RT @
 javascript if (typeof hBookmark != 'undefined') liberator.loadScript('chrome://hatenabookmark/content/vimperator/plugin/hatenabookmark.js', {__proto__: this});
 
 "はてなブックマークからタブで開く
-map b :hbt<Space>
+map s :hbt<Space>
 
 " direct_bookmark.js
 let g:direct_sbm_use_services_by_tag = "h"
