@@ -258,12 +258,14 @@ autocmd LocationChange ^http://(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0
 " Tumblr (要dashboard+tombloo.user.js, ReblogCommand.user.js)
 autocmd LocationChange ^http://.*\.tumblr\.com/ :fmap i,tj p
 " FriendFeed
-autocmd LocationChange 'friendfeed\.com/' :fmap! -vkey -event keydown p P q / gh gd gm gb
+autocmd LocationChange http://friendfeed\.com/ :fmap! -vkey -event keydown p P q / gh gd gm gb
 " はてブ
 autocmd LocationChange ^http://b\.hatena\.ne\.jp/lillilife :fmap j k o e b
 " iview
 autocmd LocationChange ^chrome://iviewfx/content/iview.html :fmap j k s a z o i,tj p
-
+" Twitter
+autocmd LocationChange ^http://twitter\.com/ :fmap j k ?
+autocmd LocationChange ^http://twitter\.com/ :fmap -vkey -event keydown n m t r gh gr gp gf gm ? /
 
 " feedSomeKeys_3.js
 " http://vimperator.g.hatena.ne.jp/nokturnalmortum/20100302/1267531921
