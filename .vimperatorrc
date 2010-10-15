@@ -172,8 +172,8 @@ qmark 3 http://sangoku.bg-time.jp/
 
 " twit: 今みているサイトをパラメタに入力したコメントをつけてポストする
 command! -nargs=* feedkeys js events.feedkeys("<args>")
-command! -nargs=* twit feedkeys :copy URLAndtitle<CR>:tw <args> <C-v>
-map T :tw Browsing:
+command! -nargs=* twit feedkeys :copy URLAndtitle<CR>:twittperator <args> <C-v>
+map T :twit Browsing:
 
 " plugins
 " ======================================================================
