@@ -148,6 +148,7 @@ qmark g http://www.google.co.jp/reader/view/
 qmark m http://mail.google.com/mail?hl=ja
 qmark c http://www.google.com/calendar/
 qmark d http://docs.google.com/
+qmark e http://www.evernote.com/Home.action
 qmark f http:/last.fm/
 qmark s http://smart.fm/
 qmark M http://mixi.jp
