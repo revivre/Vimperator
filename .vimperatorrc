@@ -22,6 +22,11 @@ set! ui.key.generalAccessKey=0
 autocmd LocationChange (?!https?://(www\.google\.(co\.jp|com)/reader)|(mail\.google\.com\/(mail|a)\/|(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/|b\.hatena\.ne\.jp/lillilife)) :set! browser.tabs.loadDivertedInBackground=false
 autocmd LocationChange https?://(www\.google\.(co\.jp|com)/reader)|(mail\.google\.com\/(mail|a)\/|(reader\.livedoor\.com|fastladder\.com|0\.0\.0\.0\:3000)/reader/|b\.hatena\.ne\.jp/lillilife) :set! browser.tabs.loadDivertedInBackground=true
 
+" plugin開発用の設定
+set! javascript.options.strict=true
+set! javascript.options.showInConsole=true
+set! browser.dom.window.dump.enabled=true
+
 
 
 " options
