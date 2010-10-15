@@ -64,7 +64,7 @@ liberator.registerObserver("enter", function() {
 //liberator.globalVariables.copy_use_wedata = true;
 liberator.globalVariables.copy_templates = [
   { label: 'bitlyURL', value: '%bitURL%', custom: function() { return plugins.bitly.get(buffer.URL);}},
-  { label: 'URLAndtitle',     value: '%URL% - %TITLE%' },
+  { label: 'URLandTitle',     value: '%URL% - %TITLE%' },
   { label: 'url',             value: '%URL%' },
   { label: 'title',     value: '%TITLE%' },
   { label: 'titleAndURL',     value: '%TITLE% - %URL%' }
