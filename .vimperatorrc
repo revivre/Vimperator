@@ -203,10 +203,13 @@ let g:smooziee_scroll_interval="15"
 " let livedoor_id = "lillilife"
 
 " twittperator.js
-map ,t :twittperator <CR>
+map ,t :twittperator<CR>
 map ,T :twittperator<Space>
-map ,r :twittperator! <CR>
-map ,R :twittperator RT @
+map ,tf :twittperator!+@
+map ,tF :twittperator!<CR>
+map ,tr :twittperator!@
+map ,tR :twittperator RT @
+map ,ts :twittperator!?<Space>
 
 " hatena bookmark 拡張
 javascript if (typeof hBookmark != 'undefined') liberator.loadScript('chrome://hatenabookmark/content/vimperator/plugin/hatenabookmark.js', {__proto__: this});
