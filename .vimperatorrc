@@ -149,7 +149,7 @@ qmark m http://mail.google.com/mail?hl=ja
 qmark c http://www.google.com/calendar/
 qmark d http://docs.google.com/
 qmark e http://www.evernote.com/Home.action
-qmark f http:/last.fm/
+qmark f http:/www.facebook.com
 qmark s http://smart.fm/
 qmark M http://mixi.jp
 qmark t http://twitter.com
@@ -162,7 +162,7 @@ qmark F http://www.friendfeed.com/
 qmark L grr
 qmark q quix
 qmark R rtm
-qmark S sfm
+qmark S http://last.fm/home
 qmark B bitly
 qmark D http://www.dropbox.com/
 qmark H http://github.com/
